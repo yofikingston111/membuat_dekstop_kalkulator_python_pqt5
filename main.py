@@ -62,6 +62,28 @@ class CalcUI(QMainWindow):
                    '2': (2, 1),
                    '3': (2, 2),
                    '-': (2, 3),
+                   ')': (2, 4),
+                   '0': (3, 0),
+                   '00':(3, 1),
+                   '.' :(3, 2),
+                   '+' :(3, 3),
+                   '=': (3, 4),
+                    }
+        #create button and add to grid layout
+        for btnText, position in buttons.items():
+            self.buttons[btnText] = QPushButton(btnText)
+            self.buttons[btnText].setFixedSize(40, 40)
+            buttonsLayout.addWidget(self.buttons[btnText], position[0], position[1])
 
+        #add button layout to general layout
+        self.generalLayout.addLayout(buttonsLayout)
 
-        }
+    def setDisplayText(self, text):
+        self.display.setText(text)
+        self.display.setFocus()
+
+    def displayText(self):
+        return self.display.text()
+
+    def clearDisplay(self):
+        self.setDisplayText('')

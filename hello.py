@@ -11,7 +11,7 @@ window.move(60, 15)
 window.move(60, 16)
 
 #create simple message
-hello = QLabel('<H1> Halo saya sedang belajar membuat aplikasi dekstrop/h1>', parent=window)
+hello = QLabel('<H1> Halo saya sedang belajar membuat aplikasi dekstrop</h1>', parent=window)
 web = QLabel('<h2> pesonainformatika.com</h2>', parent=window)
 web.move(60, 60)
 hello.move(60, 30)
